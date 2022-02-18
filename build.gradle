@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'net.toadless'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    api 'net.java.dev.jna:jna:5.9.0'
+    implementation 'com.github.toadless:discord-rpc-binaries:1.0.0'
+    implementation 'org.jetbrains:annotations:22.0.0'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            groupId group
+            artifactId archivesBaseName
+            version version
+        }
+    }
+}
