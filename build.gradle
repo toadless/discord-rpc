@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'net.toadless'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     api 'net.java.dev.jna:jna:5.9.0'
-    implementation 'com.github.toadless:discord-rpc-binaries:1.0.0'
+    implementation 'com.github.toadless:discord-rpc-binaries:1.0.1'
     implementation 'org.jetbrains:annotations:22.0.0'
 }
 
